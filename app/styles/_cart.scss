@@ -1,0 +1,11 @@
+.cart {
+  @apply flex flex-col space-y-3;
+
+  .cart--item {
+    @apply flex justify-between;
+
+    .actions {
+      @apply flex space-x-3;
+    }
+  }
+}

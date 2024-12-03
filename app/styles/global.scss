@@ -1,0 +1,9 @@
+@use 'layout';
+@use 'form';
+@use 'products';
+@use 'cart';
+
+
+.button {
+  @apply border px-3 leading-8 flex justify-center items-center;
+}

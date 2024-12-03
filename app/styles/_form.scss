@@ -1,0 +1,14 @@
+.form {
+  @apply flex flex-col space-y-3;
+
+  .footer {
+    @apply flex flex-col justify-center items-center space-y-3 pt-6;
+  }
+}
+.field {
+  @apply flex flex-col;
+
+  input, select, textarea {
+    @apply border px-3 py-1.5 min-h-[38px];
+  }
+}

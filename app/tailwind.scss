@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+
+}
+
+h1 {
+  @apply text-2xl text-center mb-12;
+}

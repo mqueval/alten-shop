@@ -1,0 +1,15 @@
+.products--list {
+  @apply flex flex-col space-y-3;
+
+}
+.products--item {
+  @apply border px-3 py-1.5 flex justify-between;
+
+  .name {
+    @apply font-bold;
+  }
+
+  .actions {
+    @apply flex space-x-3 self-start;
+  }
+}

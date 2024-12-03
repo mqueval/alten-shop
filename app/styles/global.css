@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* Styles de base */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header fixe en haut */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+}
+
+/* Container principal en-dessous du header */
+.main-container {
+  display: flex;
+  flex: 1;
+  margin-top: 60px; /* Hauteur du header */
+  height: calc(100vh - 60px); /* Hauteur totale moins le header */
+}
+
+/* Sidebar fixe à gauche */
+.sidebar {
+  background-color: #f4f4f4;
+  width: 250px;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  position: fixed;
+  height: 100%;
+  top: 60px; /* Aligner avec le bas du header */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 1rem 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Contenu principal */
+.content {
+  margin-left: 250px; /* Laisse de la place pour la sidebar */
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto; /* Si le contenu dépasse, ajouter un défilement */
+}
+
+.form {
+  @apply flex flex-col space-y-3;
+}
+.form .footer {
+  @apply flex flex-col justify-center items-center space-y-3 pt-6;
+}
+
+.field {
+  @apply flex flex-col;
+}
+.field input, .field select, .field textarea {
+  @apply border px-3 py-1.5 min-h-[38px];
+}
+
+.products--list {
+  @apply flex flex-col space-y-3;
+}
+
+.products--item {
+  @apply border px-3 py-1.5 flex justify-between;
+}
+.products--item .name {
+  @apply font-bold;
+}
+.products--item .actions {
+  @apply flex space-x-3 self-start;
+}
+
+.cart {
+  @apply flex flex-col space-y-3;
+}
+.cart .cart--item {
+  @apply flex justify-between;
+}
+.cart .cart--item .actions {
+  @apply flex space-x-3;
+}
+
+.button {
+  @apply border px-3 leading-8 flex justify-center items-center;
+}
+
+/*# sourceMappingURL=global.css.map */
